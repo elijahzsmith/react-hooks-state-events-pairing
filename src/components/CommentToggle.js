@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Comments from "./Comments";
-import { v4 as uuid } from 'uuid'
+import CommentsContainer from "./CommentsContainer";
+import { v4 as uuid } from "uuid";
 
 function CommentToggle({ video }) {
   const [isShown, setIsShown] = useState(true);
@@ -11,7 +11,9 @@ function CommentToggle({ video }) {
 
   const text = isShown ? "Hide" : "Show";
 
-  const showComments = isShown ? <Comments key={uuid()} video={video} /> : null;
+  const showComments = isShown ? (
+    <CommentsContainer key={uuid()} video={video} />
+  ) : null;
 
   return (
     <div>

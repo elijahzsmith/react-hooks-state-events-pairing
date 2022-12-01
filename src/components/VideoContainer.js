@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+// import Comments from "./Comments";
 import CommentToggle from "./CommentToggle";
 
-function VideoContainer({ video }) {
+function VideoContainer({ video, handleHideComments }) {
   const [currLikes, setCurrLikes] = useState(video.upvotes);
   const [currDislikes, setCurrDislikes] = useState(video.downvotes);
 

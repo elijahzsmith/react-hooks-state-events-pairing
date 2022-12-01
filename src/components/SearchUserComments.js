@@ -1,28 +1,14 @@
-import React from 'react'
-import Comments from './Comments'
+import React from "react";
 
-function SearchUserComments() {
-
-
-    // const handleSearch = (e) => {
-    //     console.log(e.target.value);
-    //     const filteredComments = users.filter(
-    //       (user) => {
-    //         return user.toLowerCase().includes(e.target.value.toLowerCase()) === e.target.value.toLowerCase()
-    //         }
-    //     );
-    //     set
-    //   };
-
-
+function SearchUserComments({ setSearch }) {
   return (
     <form>
-        <input
-          placeholder="search comments..."
-        //   onChange={(e) => handleSearch(e)}
-        ></input>
-      </form>
-  )
+      <input
+        placeholder="search comments..."
+        onChange={(e) => setSearch(e.target.value)}
+      ></input>
+    </form>
+  );
 }
 
-export default SearchUserComments
+export default SearchUserComments;

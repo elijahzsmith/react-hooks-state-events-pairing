@@ -3,8 +3,6 @@ import VideoContainer from "./VideoContainer.js";
 import React from "react";
 
 function App() {
-  console.log("Here's your data:", video);
-
   return (
     <div className="App">
       <VideoContainer video={video} />
